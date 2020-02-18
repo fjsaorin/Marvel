@@ -19,6 +19,10 @@ protocol CharacterDetailPresenterProtocol {
     func viewReady()
 }
 
+protocol CharacterDetailRouterProtocol {
+    
+}
+
 protocol CharacterDetailBuilderProtocol {
     func build(characterId: Int) -> CharacterDetailView
 }

@@ -21,6 +21,10 @@ protocol CharacterListPresenterProtocol {
     func cellTapped(at index: Int)
 }
 
+protocol CharacterListRouterProtocol {
+    func navigateToDetail(characterId: Int)
+}
+
 protocol CharacterListBuilderProtocol {
     func build() -> CharacterListView
 }

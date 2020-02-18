@@ -8,6 +8,6 @@
 
 import Foundation
 
-final class CharacterDetailRouter: Router {
+final class CharacterDetailRouter: Router, CharacterDetailRouterProtocol {
 
 }

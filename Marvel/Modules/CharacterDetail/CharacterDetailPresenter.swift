@@ -11,15 +11,15 @@ import Foundation
 final class CharacterDetailPresenter {
 
     private weak var view: CharacterDetailViewProtocol?
-    private let router: CharacterDetailRouter
-    private let characterInteractorFactory: CharacterInteractorFactory
+    private let router: CharacterDetailRouterProtocol
+    private let characterInteractorFactory: CharacterInteractorFactoryProtocol
     private let characterId: Int
     
     private var fetchCharacterInteractor: Interactor?
     
     private var character: Character?
     
-    required init(view: CharacterDetailViewProtocol, router: CharacterDetailRouter, characterInteractorFactory: CharacterInteractorFactory, characterId: Int) {
+    required init(view: CharacterDetailViewProtocol, router: CharacterDetailRouterProtocol, characterInteractorFactory: CharacterInteractorFactoryProtocol, characterId: Int) {
         self.view = view
         self.router = router
         self.characterInteractorFactory = characterInteractorFactory

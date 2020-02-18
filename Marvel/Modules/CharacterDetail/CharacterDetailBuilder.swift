@@ -10,9 +10,9 @@ import Foundation
 
 final class CharacterDetailBuilder: Builder {
     
-    private let characterInteractorFactory: CharacterInteractorFactory
+    private let characterInteractorFactory: CharacterInteractorFactoryProtocol
 
-    init(modulesFactory: ModulesFactory, characterInteractorFactory: CharacterInteractorFactory) {
+    init(modulesFactory: ModulesFactory, characterInteractorFactory: CharacterInteractorFactoryProtocol) {
         self.characterInteractorFactory = characterInteractorFactory
         super.init(modulesFactory: modulesFactory)
     }

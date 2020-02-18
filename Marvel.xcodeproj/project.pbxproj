@@ -10,7 +10,7 @@
 		A148CD3023FC50A200D17277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148CD2F23FC50A200D17277 /* AppDelegate.swift */; };
 		A148CD3923FC50A200D17277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A148CD3823FC50A200D17277 /* Assets.xcassets */; };
 		A148CD3C23FC50A200D17277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A148CD3A23FC50A200D17277 /* LaunchScreen.storyboard */; };
-		A148CD4723FC50A200D17277 /* MarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148CD4623FC50A200D17277 /* MarvelTests.swift */; };
+		A148CD4723FC50A200D17277 /* CharacterListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148CD4623FC50A200D17277 /* CharacterListPresenterTests.swift */; };
 		A148CD5923FC525400D17277 /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148CD5823FC525400D17277 /* ModulesFactory.swift */; };
 		A148CD5E23FC53AF00D17277 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148CD5C23FC53AF00D17277 /* CharacterListView.swift */; };
 		A148CD5F23FC53AF00D17277 /* CharacterListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A148CD5D23FC53AF00D17277 /* CharacterListView.xib */; };
@@ -58,7 +58,7 @@
 		A148CD3B23FC50A200D17277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A148CD3D23FC50A200D17277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A148CD4223FC50A200D17277 /* MarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A148CD4623FC50A200D17277 /* MarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTests.swift; sourceTree = "<group>"; };
+		A148CD4623FC50A200D17277 /* CharacterListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterTests.swift; sourceTree = "<group>"; };
 		A148CD4823FC50A200D17277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A148CD5823FC525400D17277 /* ModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
 		A148CD5C23FC53AF00D17277 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		A148CD4523FC50A200D17277 /* MarvelTests */ = {
 			isa = PBXGroup;
 			children = (
-				A148CD4623FC50A200D17277 /* MarvelTests.swift */,
+				A148CD4623FC50A200D17277 /* CharacterListPresenterTests.swift */,
 				A148CD4823FC50A200D17277 /* Info.plist */,
 			);
 			path = MarvelTests;
@@ -418,7 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A148CD4723FC50A200D17277 /* MarvelTests.swift in Sources */,
+				A148CD4723FC50A200D17277 /* CharacterListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

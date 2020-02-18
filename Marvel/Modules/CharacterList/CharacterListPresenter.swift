@@ -11,15 +11,15 @@ import Foundation
 final class CharacterListPresenter {
     
     private weak var view: CharacterListViewProtocol?
-    private let router: CharacterListRouter
-    private let characterInteractorFactory: CharacterInteractorFactory
+    private let router: CharacterListRouterProtocol
+    private let characterInteractorFactory: CharacterInteractorFactoryProtocol
     
     private var fetchCharactersInteractor: Interactor?
     
     private var characters: [Character] = []
     private var loadingMore = false
     
-    required init(view: CharacterListViewProtocol, router: CharacterListRouter, characterInteractorFactory: CharacterInteractorFactory) {
+    required init(view: CharacterListViewProtocol, router: CharacterListRouterProtocol, characterInteractorFactory: CharacterInteractorFactoryProtocol) {
         self.view = view
         self.router = router
         self.characterInteractorFactory = characterInteractorFactory

@@ -8,6 +8,11 @@
 
 import Foundation
 
+protocol CharacterInteractorFactoryProtocol {
+    func fetchCharactersInteractor(offset: Int, completion: @escaping (Result<[Character], CharacterError>) -> Void) -> Interactor
+    func fetchCharacterInteractor(characterId: Int, completion: @escaping (Result<Character, CharacterError>) -> Void) -> Interactor
+}
+
 final class CharacterInteractorFactory {
     
     private let repository: CharacterRepositoryProtocol
@@ -15,7 +20,10 @@ final class CharacterInteractorFactory {
     required init(repository: CharacterRepositoryProtocol) {
         self.repository = repository
     }
+}
 
+extension CharacterInteractorFactory: CharacterInteractorFactoryProtocol {
+    
     func fetchCharactersInteractor(offset: Int, completion: @escaping (Result<[Character], CharacterError>) -> Void) -> Interactor {
         return FetchCharactersInteractor(offset: offset, repository: repository, completion: completion)
     }

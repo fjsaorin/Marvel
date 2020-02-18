@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class CharacterListRouter: Router {
+final class CharacterListRouter: Router, CharacterListRouterProtocol {
     
     func navigateToDetail(characterId: Int) {
         let detailView = modulesFactory.characterDetailBuilder.build(characterId: characterId)
