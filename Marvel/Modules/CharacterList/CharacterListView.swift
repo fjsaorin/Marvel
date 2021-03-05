@@ -10,6 +10,10 @@ import UIKit
 
 class CharacterListView: UIViewController {
     
+    private let rowHeight: CGFloat = 100
+    private let bottomRowsCount = 5
+    private let cellIdentifier = "Cell"
+    
     var presenter: CharacterListPresenterProtocol!
 
     @IBOutlet weak var tableView: UITableView! {
@@ -20,10 +24,6 @@ class CharacterListView: UIViewController {
             tableView.register(UINib(nibName: "CharacterListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         }
     }
-    
-    private let rowHeight: CGFloat = 100
-    private let bottomRowsCount = 5
-    private let cellIdentifier = "Cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()

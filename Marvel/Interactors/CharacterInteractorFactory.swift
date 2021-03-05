@@ -32,3 +32,37 @@ extension CharacterInteractorFactory: CharacterInteractorFactoryProtocol {
         return FetchCharacterInteractor(characterId: characterId, repository: repository, completion: completion)
     }
 }
+
+final class FetchCharactersInteractor: Interactor {
+    
+    private let offset: Int
+    private let repository: CharacterRepositoryProtocol
+    private let completion: (Result<[Character], CharacterError>) -> Void
+    
+    required init(offset: Int, repository: CharacterRepositoryProtocol, completion: @escaping (Result<[Character], CharacterError>) -> Void) {
+        self.offset = offset
+        self.repository = repository
+        self.completion = completion
+    }
+    
+    func execute() {
+        repository.fetchCharacters(offset: offset, completion: completion)
+    }
+}
+
+final class FetchCharacterInteractor: Interactor {
+    
+    private let characterId: Int
+    private let repository: CharacterRepositoryProtocol
+    private let completion: (Result<Character, CharacterError>) -> Void
+    
+    required init(characterId: Int, repository: CharacterRepositoryProtocol, completion: @escaping (Result<Character, CharacterError>) -> Void) {
+        self.characterId = characterId
+        self.repository = repository
+        self.completion = completion
+    }
+    
+    func execute() {
+        repository.fetchCharacter(characterId: characterId, completion: completion)
+    }
+}

@@ -29,7 +29,10 @@ final class CharacterService {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.queryItems = queryItems
         
-        guard let url = urlComponents?.url else { return }
+        guard let url = urlComponents?.url else {
+            completion(.failure(.unknown))
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
@@ -51,7 +54,10 @@ final class CharacterService {
         var urlComponents = URLComponents(string: "\(baseURL)/\(characterId)")
         urlComponents?.queryItems = queryItems
         
-        guard let url = urlComponents?.url else { return }
+        guard let url = urlComponents?.url else {
+            completion(.failure(.unknown))
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
